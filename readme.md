@@ -4,7 +4,7 @@
 [![npm bundle size][bundle-size]][bundlephobia]
 [![License][license]](./license)
 
-> Simple checker for npm package updates.
+> Simple check for npm package updates.
 
 In simple terms, this is basically a lightweight alternative to [update-notifier](https://github.com/yeoman/update-notifier), but despite its significantly smaller download size, it still retains most of the essential features.
 
@@ -68,7 +68,7 @@ Type: `String`
 
 ##### `type`
 
-Difference type between two semver versions.\
+Difference type between current and latest semver version.\
 Type: `String`
 
 Possible values:
@@ -92,12 +92,12 @@ Type: `object`
 
 ##### `pkg.name`
 
-Name of given npm module.\
+Name of npm module.\
 Type: `String` _(required)_
 
 ##### `pkg.version`
 
-Version of given npm module.\
+Version of npm module.\
 Type: `String` _(required)_
 
 ##### `distTag`
@@ -116,14 +116,14 @@ Default: `1000 * 60 * 60 * 24` _(1 day)_
 
 ##### `cache`
 
-Whether to use cache. Setting this option to `false` will cause `checkInterval` to not function.
+Whether to use cache. Setting this option to `false` will cause `checkInterval` to not function, thus checking for new update every run.
 
 Type: `Boolean`\
 Default: `true`
 
 ##### `timeout`
 
-Maximum time in milliseconds to wait for the request to complete.
+Maximum time in milliseconds to wait for the request to npm registry to complete.
 
 Type: `Number`\
 Default: `30000` _(30 seconds)_
