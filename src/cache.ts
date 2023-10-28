@@ -26,7 +26,7 @@ export class Cache {
                 const content = await this.read();
                 // check if file is valid and not empty
                 if (content && !isNaN(content)) return;
-                debug('cache file is invalid, rewritting');
+                debug('cache file is invalid, rewriting');
             } catch {
                 // get rid of cache file if it's not a valid file
                 await fs.promises.unlink(this.fp);

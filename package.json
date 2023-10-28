@@ -1,7 +1,7 @@
 {
   "name": "tiny-update-notifier",
   "version": "0.0.0",
-  "description": "Simple checker for npm package updates",
+  "description": "Simple check for npm package updates",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -36,6 +36,7 @@
     "cachedir": "^2.4.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.51.0",
+    "eslint-plugin-spellcheck": "^0.0.20",
     "release-it": "^16.2.1",
     "semver": "^7.5.4",
     "terser": "^5.22.0",

@@ -5,7 +5,7 @@ import type { Options, Update } from './types';
 import { debug } from './debug';
 
 /**
- * Check if an update is avainable.
+ * Check if an update is available.
  * @param {Options} options Arguments
  * @returns {Update | false}
  * @async
@@ -58,7 +58,7 @@ export default async function updateNotifier(options: Options): Promise<Update |
 
     const latestVersion = await getLatestVersion(options.pkg.name, options.distTag, options.timeout);
     await cache?.update();
-    debug('current vesion:', options.pkg.version);
+    debug('current version:', options.pkg.version);
     debug('latest version:', latestVersion);
 
     if (semverGt(latestVersion, options.pkg.version)) {
