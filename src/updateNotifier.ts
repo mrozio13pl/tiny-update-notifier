@@ -46,13 +46,17 @@ export default async function updateNotifier(options: Options): Promise<Update |
 
     if (options.cache) {
         cache = new (await import('./cache.js')).Cache(options.pkg);
-        await cache.create();
-        const latestCheck = await cache.read();
-        debug('last check:', new Date(latestCheck));
+        try {
+            const latestCheck = await cache.read();
+            debug('last check:', new Date(latestCheck));
 
-        if (latestCheck + options.checkInterval! > Date.now()) {
-            debug('already checked');
-            return false;
+            if (latestCheck + options.checkInterval! > Date.now()) {
+                debug('already checked');
+                return false;
+            }
+        } catch {
+            await cache.create();
+            debug('cache file most likely doesn\'t exist, thus created one');
         }
     }
 
