@@ -23,6 +23,10 @@
                       "type": "fix",
                       "section": "🐞 Bug Fixes"
                     },
+                    {
+                        "type": "refactor",
+                        "section": "📦 Code Refactoring"
+                    },
                     {}
                 ]
             }
