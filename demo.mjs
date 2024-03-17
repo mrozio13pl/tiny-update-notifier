@@ -7,6 +7,6 @@ try {
         console.log(`\n       New version of ${update.name} available!`);
         console.log(`       Update: ${update.current} → ${update.latest} (${update.type})\n`);
     }
-} catch {
-    console.log('Couldn\'t get the latest version.');
+} catch (error) {
+    console.log('Couldn\'t get the latest version:', error);
 }
