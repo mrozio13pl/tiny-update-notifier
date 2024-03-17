@@ -32,6 +32,7 @@
   "devDependencies": {
     "@mrozio/eslint-config": "^1.0.3",
     "@release-it/conventional-changelog": "^8.0.1",
+    "@types/node": "^20",
     "@types/semver": "^7.5.6",
     "cachedir": "^2.4.0",
     "cross-env": "^7.0.3",
