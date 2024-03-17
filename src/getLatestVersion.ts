@@ -1,5 +1,5 @@
-import https from 'https';
-import { debug } from './debug';
+import https from 'node:https';
+import { debug } from './utils/debug';
 
 /**
  * Get latest version of npm package.

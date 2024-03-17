@@ -1,3 +1,5 @@
+import type { Difference } from 'semiff';
+
 export declare interface Pkg {
     /** Name of the package */
     name: string;
@@ -33,16 +35,6 @@ export declare interface Options {
     timeout?: number;
 }
 
-/** Difference type between two semver versions */
-export declare type ReleaseType =
-    | 'major'
-    | 'premajor'
-    | 'minor'
-    | 'preminor'
-    | 'patch'
-    | 'prepatch'
-    | 'prerelease';
-
 export declare interface Update {
     name: Pkg['name'];
 
@@ -52,5 +44,6 @@ export declare interface Update {
     /** Current version */
     current: string;
 
-    readonly type: ReleaseType;
+    /** Version difference. */
+    readonly type: Difference;
 }

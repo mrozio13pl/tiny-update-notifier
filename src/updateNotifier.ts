@@ -1,8 +1,8 @@
 import { getLatestVersion } from './getLatestVersion';
-import semverGt from 'semver/functions/gt';
-import semverDiff from 'semver/functions/diff';
+import { Cache } from './cache';
+import semiff from 'semiff';
 import type { Options, Update } from './types';
-import { debug } from './debug';
+import { debug } from './utils/debug';
 
 /**
  * Check if an update is available.
@@ -40,12 +40,12 @@ export default async function updateNotifier(options: Options): Promise<Update |
         throw new Error('pkg.name and pkg.version are required');
     }
 
-    let cache: import('./cache').Cache | undefined;
+    let cache: Cache | undefined;
 
     options = { cache: true, checkInterval: 60 * 60 * 24 * 1e3, ...options };
 
     if (options.cache) {
-        cache = new (await import('./cache.js')).Cache(options.pkg);
+        cache = new Cache(options.pkg);
         try {
             const latestCheck = await cache.read();
             debug('last check:', new Date(latestCheck));
@@ -65,12 +65,14 @@ export default async function updateNotifier(options: Options): Promise<Update |
     debug('current version:', options.pkg.version);
     debug('latest version:', latestVersion);
 
-    if (semverGt(latestVersion, options.pkg.version)) {
+    const diff = semiff(options.pkg.version, latestVersion);
+
+    if (diff) {
         return {
             name: options.pkg.name,
             current: options.pkg.version,
             latest: latestVersion,
-            type: semverDiff(latestVersion, options.pkg.version)!
+            type: diff
         };
     }
 
