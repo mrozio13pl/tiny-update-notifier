@@ -38,19 +38,18 @@
     "npm"
   ],
   "devDependencies": {
-    "@mrozio/eslint-config": "^1.0.3",
+    "@mrozio/eslint-config": "^1.0.4",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "^20",
-    "@types/semver": "^7.5.6",
+    "@types/semver": "^7.5.8",
     "cachedir": "^2.4.0",
     "clean-publish": "^4.3.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.54.0",
-    "eslint-plugin-spellcheck": "^0.0.20",
-    "release-it": "^17.0.0",
-    "semver": "^7.5.4",
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.2"
+    "eslint": "^8.57.0",
+    "release-it": "^17.1.1",
+    "semver": "^7.6.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
   },
   "packageManager": "^pnpm@8.9.0"
 }
