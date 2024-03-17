@@ -24,7 +24,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup",
-    "dev": "npx cross-env TINY_UPDATE_NOTIFIER_DEBUG=true node demo.mjs"
+    "dev": "npx cross-env TINY_UPDATE_NOTIFIER_DEBUG=true node demo.mjs",
+    "publish": "clean-publish",
+    "release": "npm run build && npx release-it && npm run publish"
   },
   "files": [
     "dist"
@@ -41,6 +43,7 @@
     "@types/node": "^20",
     "@types/semver": "^7.5.6",
     "cachedir": "^2.4.0",
+    "clean-publish": "^4.3.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.54.0",
     "eslint-plugin-spellcheck": "^0.0.20",
