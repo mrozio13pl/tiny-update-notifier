@@ -36,7 +36,7 @@ try {
 
 ## API
 
-### `updateNotifier(options)`
+### updateNotifier(options)
 
 Check for updates for an npm module.\
 Returns: `Update | false`
