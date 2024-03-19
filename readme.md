@@ -6,7 +6,7 @@
 
 > Simple check for npm package updates.
 
-In simple terms, this is basically a lightweight alternative to [update-notifier](https://github.com/yeoman/update-notifier), but despite its significantly smaller download size, it still retains most of the essential features.
+A lightweight alternative for [update-notifier](https://github.com/yeoman/update-notifier) with most of the essential features. Useful for CLI apps.
 
 ## Install
 
@@ -41,7 +41,7 @@ try {
 Check for updates for an npm module.\
 Returns: `Update | false`
 
-#### `Update`
+#### Update
 
 Contains information about update version etc.\
 Type: `Object`
@@ -51,22 +51,22 @@ For example:
 { name: 'test', current: '1.0.0', latest: '3.3.0', type: 'major' }
 ```
 
-##### `name`
+##### name
 
 The name of an npm module.\
 Type: `String`
 
-##### `current`
+##### current
 
 Current version of an npm module.\
 Type: `String`
 
-##### `latest`
+##### latest
 
 Latest version of an npm module.\
 Type: `String`
 
-##### `type`
+##### type
 
 Difference type between current and latest semver version.\
 Type: `String`
@@ -80,48 +80,47 @@ Possible values:
 * `'patch'`
 * `'prepatch'`
 * `'prerelease'`
-* `'build'`
 
-#### `options`
+#### options
 
 Type: `Object`\
 Options for getting new update.
 
-##### `pkg`
-Type: `object`
+##### pkg
+Type: `object` _(required)_
 
-##### `pkg.name`
+###### name
 
 Name of npm module.\
 Type: `String` _(required)_
 
-##### `pkg.version`
+###### version
 
 Version of npm module.\
 Type: `String` _(required)_
 
-##### `distTag`
+##### distTag
 
 Which [dist-tag](https://docs.npmjs.com/adding-dist-tags-to-packages) to use to find the latest version.
 
 Type: `String`\
 Default: `'latest'`
 
-##### `checkInterval`
+##### checkInterval
 
 How often to check for updates.
 
 Type: `Number`\
 Default: `1000 * 60 * 60 * 24` _(1 day)_
 
-##### `cache`
+##### cache
 
 Whether to use cache. Setting this option to `false` will cause `checkInterval` to not function, thus checking for new update every run.
 
 Type: `Boolean`\
 Default: `true`
 
-##### `timeout`
+##### timeout
 
 Maximum time in milliseconds to wait for the request to npm registry to complete.
 
