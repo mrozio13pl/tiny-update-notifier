@@ -1,6 +1,6 @@
 {
   "name": "tiny-update-notifier",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple check for npm package updates",
   "type": "commonjs",
   "main": "./dist/index.js",
