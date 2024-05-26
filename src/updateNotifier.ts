@@ -27,7 +27,7 @@ import { debug } from './utils/debug';
  * }
  * ```
  *
- * Output if when version is available:
+ * Output if a newer version is available:
  * ```md
  * New version of test available!
  * Update: 1.0.0 → 3.3.0 (major)

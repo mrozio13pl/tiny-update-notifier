@@ -1,3 +1,5 @@
+// A simplified version of: https://github.com/sindresorhus/env-paths
+
 import path from 'node:path';
 import os from 'node:os';
 

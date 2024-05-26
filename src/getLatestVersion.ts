@@ -3,10 +3,10 @@ import { debug } from './utils/debug';
 
 /**
  * Get latest version of npm package.
- * @param {string} pkgName Package name
- * @param {string} distTag Dist-tag which will be used to find the latest
- * @param {number} timeout Request timeout
- * @returns {Promise<string>} Latest version
+ * @param {string} pkgName Package name.
+ * @param {string} distTag Dist-tag which will be used to find the latest version.
+ * @param {number} timeout Request timeout.
+ * @returns {Promise<string>} Latest version.
  */
 export function getLatestVersion(pkgName: string, distTag = 'latest', timeout = 30_000): Promise<string> {
     const url = `https://registry.npmjs.org/-/package/${pkgName}/dist-tags`;
