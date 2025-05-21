@@ -23,7 +23,7 @@
   "author": "mrozio13pl",
   "license": "MIT",
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "dev": "node demo.mjs",
     "publish": "clean-publish",
     "release": "npm run build && npx release-it && npm run publish"
@@ -47,7 +47,7 @@
     "clean-publish": "^5.0.0",
     "eslint": "^8.57.0",
     "release-it": "^17.3.0",
-    "tsup": "^8.0.2",
+    "tsdown": "^0.12.1",
     "typescript": "^5.4.5"
   }
 }
