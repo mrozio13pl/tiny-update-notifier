@@ -1,5 +1,12 @@
 
 
+## [2.0.1](https://github.com/mrozio13pl/tiny-update-notifier/compare/v2.0.0...v2.0.1) (2025-05-21)
+
+
+### 📦 Code Refactoring
+
+* remove debug ([1fb7394](https://github.com/mrozio13pl/tiny-update-notifier/commit/1fb739449dd982a9b37e59ad071078dcd07519f3))
+
 ## [2.0.0](https://github.com/mrozio13pl/tiny-update-notifier/compare/v1.0.1...v2.0.0) (2024-03-19)
 
 
