@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup",
-    "dev": "npx cross-env TINY_UPDATE_NOTIFIER_DEBUG=true node demo.mjs",
+    "dev": "node demo.mjs",
     "publish": "clean-publish",
     "release": "npm run build && npx release-it && npm run publish"
   },
@@ -45,11 +45,9 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "^20",
     "clean-publish": "^5.0.0",
-    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "release-it": "^17.3.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
-  },
-  "packageManager": "^pnpm@8.9.0"
+  }
 }

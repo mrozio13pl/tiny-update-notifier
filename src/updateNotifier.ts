@@ -2,7 +2,6 @@ import { getLatestVersion } from './getLatestVersion';
 import { Cache } from './cache';
 import semiff from 'semiff';
 import type { Options, Update } from './types';
-import { debug } from './utils/debug';
 
 /**
  * Check if an update is available.
@@ -48,22 +47,17 @@ export default async function updateNotifier(options: Options): Promise<Update |
         cache = new Cache(options.pkg);
         try {
             const latestCheck = await cache.read();
-            debug('last check:', new Date(latestCheck));
 
             if (latestCheck + options.checkInterval! > Date.now()) {
-                debug('already checked');
                 return false;
             }
         } catch {
             await cache.create();
-            debug('cache file most likely doesn\'t exist, thus created one');
         }
     }
 
     const latestVersion = await getLatestVersion(options.pkg.name, options.distTag, options.timeout);
     await cache?.update();
-    debug('current version:', options.pkg.version);
-    debug('latest version:', latestVersion);
 
     const diff = semiff(options.pkg.version, latestVersion);
 

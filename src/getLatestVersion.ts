@@ -1,5 +1,4 @@
 import https from 'node:https';
-import { debug } from './utils/debug';
 
 /**
  * Get latest version of npm package.
@@ -21,7 +20,6 @@ export function getLatestVersion(pkgName: string, distTag = 'latest', timeout = 
                     try {
                         const json = JSON.parse(body);
                         const version = json[distTag];
-                        debug('npm registry response:', json);
 
                         if (!version) reject(new Error(`Couldn't get version for dist-tag: ${distTag}`));
                         else resolve(version);
@@ -29,7 +27,7 @@ export function getLatestVersion(pkgName: string, distTag = 'latest', timeout = 
                         reject(error);
                     }
                 })
-                .on('error', err => { reject(err) });
+                .on('error', reject);
         });
 
         const timeout_id = setTimeout(() => {
