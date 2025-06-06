@@ -1,5 +1,12 @@
 
 
+## [2.0.2](https://github.com/mrozio13pl/tiny-update-notifier/compare/v2.0.1...v2.0.2) (2025-06-06)
+
+
+### 🐞 Bug Fixes
+
+* remove node protocol from output ([9259d44](https://github.com/mrozio13pl/tiny-update-notifier/commit/9259d4481c51248017a304d60b70d927a011de5d))
+
 ## [2.0.1](https://github.com/mrozio13pl/tiny-update-notifier/compare/v2.0.0...v2.0.1) (2025-05-21)
 
 
